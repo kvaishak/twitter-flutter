@@ -169,7 +169,7 @@ class _NewUser extends State<NewUser> {
           sendTweet();
           _formKey.currentState.reset();
         },
-        icon: Icon(Icons.send, size: 20),
+        icon: Icon(Icons.accessibility, size: 20),
         label: Text("Create User"),
       );
     }
