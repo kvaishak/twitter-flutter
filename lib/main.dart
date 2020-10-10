@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter/Pages/user_list.dart';
-import 'package:twitter/Pages/new_post.dart';
+
+import 'Pages/new_tweet.dart';
+import 'Pages/new_user.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,9 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
     if(_selectedIndex == 0){
       function = UserList();
     }else if(_selectedIndex == 1){
-      function =  new PostList();
+      function =  new NewTweet();
     }else{
-      // function = _signOut();
+      function = new NewUser();
     }
 
 
