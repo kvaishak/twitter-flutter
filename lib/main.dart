@@ -9,7 +9,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -40,25 +38,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     var function;
-    if(_selectedIndex == 0){
+    if (_selectedIndex == 0) {
       function = UserList();
-    }else if(_selectedIndex == 1){
-      function =  new NewTweet();
-    }else{
-      function = new NewUser();
+    } else if (_selectedIndex == 1) {
+      function = new NewTweet();
+    } else {
+      function = NewUser();
     }
 
-
     return Scaffold(
-
       body: function,
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home_work_outlined),  title: Text('Home')),
-          BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_rounded), title: Text('New Tweet')),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), title: Text('New User')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_work_outlined), title: Text('Home')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outline_rounded),
+              title: Text('New Tweet')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined),
+              title: Text('New User')),
         ],
         currentIndex: _selectedIndex,
         fixedColor: Colors.blueAccent,
